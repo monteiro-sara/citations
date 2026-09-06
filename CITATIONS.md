@@ -40,7 +40,7 @@ _Last updated: 06 September 2026._
 
 10. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
 
-11. Schrantee, A., Auger, C., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* **Workshop presentation.**
+11. Schrantee, A., Auger, C., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* **ISMRM Workshop presentation.**
 
 ## Research software
 
