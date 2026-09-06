@@ -8,9 +8,9 @@ _Last updated: 06 September 2026._
 
 ## Manuscript under peer review
 
-2. Monteiro, S., Arunachalam, P.*, Pieperhoff, L.*, Tranfa, M., Masserini, F., Ritchie, C., Boada, M., Marquié, M., Vijverberg, J., Vandenberghe, R., Hanseeuw, B. J., Visser, P. J., Frisoni, G. B., Stephens, A., Farrar, G., Pardini, M., Roccatagliata, L., Jessen, F., Salvadó, G., Vállez-García, D., Pontillo, G., Luckett, E. S., Cole, J. H., Barkhof, F., Wink, A. M., Collij, L. E., & Lorenzini, L. (2026). **Amyloid PET similarity networks in preclinical Alzheimer’s disease reveal early dynamic topological reorganization.** Manuscript under review at *Brain Communications*.
+2. Monteiro, S., Arunachalam, P.&#8224;, Pieperhoff, L.&#8224;, Tranfa, M., Masserini, F., Ritchie, C., Boada, M., Marquié, M., Vijverberg, J., Vandenberghe, R., Hanseeuw, B. J., Visser, P. J., Frisoni, G. B., Stephens, A., Farrar, G., Pardini, M., Roccatagliata, L., Jessen, F., Salvadó, G., Vállez-García, D., Pontillo, G., Luckett, E. S., Cole, J. H., Barkhof, F., Wink, A. M., Collij, L. E., & Lorenzini, L. (2026). **Amyloid PET similarity networks in preclinical Alzheimer’s disease reveal early dynamic topological reorganization.** Manuscript under review at *Brain Communications*.
 
-\* Shared first authorship.
+\ &#8224; Shared first authorship.
 
 ## Manuscripts under internal review for submission
 
@@ -18,17 +18,17 @@ _Last updated: 06 September 2026._
 
 4. Monteiro, S., Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). **Rethinking Gender Differences in Camouflaging: Multivariate Trait Associations Across Compensation, Masking, and Assimilation** [Manuscript in preparation].
 
-5. Monteiro, S.*, van den Berg, J.*, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026). **Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.** [Manuscript in preparation].
+5. Monteiro, S.&#8224;, van den Berg, J.&#8224;, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026). **Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.** [Manuscript in preparation].
 
-\* Shared first authorship.
+\ &#8224; Shared first authorship.
 
 ## Manuscripts in preparation
 
 6. Monteiro, S. et al. (2026). **NIM Studio: A local-first desktop environment for neuroimaging data organization and governance.** Manuscript in preparation for *Imaging Neuroscience, Software Toolbox*.
 
-7. van den Berg, J.*, Monteiro, S.*, Marquering, H. A., Reneman, L., Schrantee, A., & Caan, M. W. A. (2026). **Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.** [Manuscript in preparation].
+7. van den Berg, J.&#8224;, Monteiro, S.&#8224;, Marquering, H. A., Reneman, L., Schrantee, A., & Caan, M. W. A. (2026). **Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.** [Manuscript in preparation].
 
-\* Shared first authorship.
+\ &#8224; Shared first authorship.
 
 ## Conference contributions
 
