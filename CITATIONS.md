@@ -8,7 +8,7 @@ _Last updated: 06 September 2026._
 
 ## Manuscript under peer review
 
-2. **Monteiro, S.**†, Arunachalam, P.†, Pieperhoff, L.†, Tranfa, M., Masserini, F., Ritchie, C., Boada, M., Marquié, M., Vijverberg, J., Vandenberghe, R., Hanseeuw, B. J., Visser, P. J., Frisoni, G. B., Stephens, A., Farrar, G., Pardini, M., Roccatagliata, L., Jessen, F., Salvadó, G., Vállez-García, D., Pontillo, G., Luckett, E. S., Cole, J. H., Barkhof, F., Wink, A. M., Collij, L. E., & Lorenzini, L. (2026). *Amyloid PET similarity networks in preclinical Alzheimer’s disease reveal early dynamic topological reorganization.* Manuscript under review at *Brain Communications*.
+2. **Monteiro, S.**, Arunachalam, P.†, Pieperhoff, L.†, Tranfa, M., Masserini, F., Ritchie, C., Boada, M., Marquié, M., Vijverberg, J., Vandenberghe, R., Hanseeuw, B. J., Visser, P. J., Frisoni, G. B., Stephens, A., Farrar, G., Pardini, M., Roccatagliata, L., Jessen, F., Salvadó, G., Vállez-García, D., Pontillo, G., Luckett, E. S., Cole, J. H., Barkhof, F., Wink, A. M., Collij, L. E., & Lorenzini, L. (2026). *Amyloid PET similarity networks in preclinical Alzheimer’s disease reveal early dynamic topological reorganization.* Manuscript under review at *Brain Communications*.
 
 † Shared first authorship.
 
