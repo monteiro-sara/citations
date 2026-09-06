@@ -12,7 +12,7 @@ _Last updated: 06 September 2026._
 
 ## Manuscripts under internal review for submission
 
-3. Monteiro, S., Maillard, A., Louis, E., Hentzen, C., Al Chare, I., Baltasis, S., Adrien, V., & Garcin, B. (2026). **Towards a multidimensional exploration of functional neurological disorder.** [Manuscript in preparation].
+3. Monteiro, S., Maillard, A., Louis, E., Hentzen, C., Al Chare, I., Baltassis, S., Adrien, V., & Garcin, B. (2026). **Towards a multidimensional exploration of functional neurological disorder.** [Manuscript in preparation].
 
 4. Monteiro, S., Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). **Rethinking the boundaries of camouflaging: A multivariate analysis of sex, empathizing, systemizing, and autistic traits.** [Manuscript in preparation].
 
@@ -42,7 +42,7 @@ _Last updated: 06 September 2026._
 
 12. Monteiro, S. (2026). **NIM Studio Wiki.** https://nim-studio.readthedocs.io/en/latest/index.html
 
-13. Monteiro, S. (2026). **CitRe.** https://github.com/CitRe-plugin
+13. Monteiro, S. (2026). **CitRe.** v1.0.0 [Computer Software] https://github.com/CitRe-plugin
 
 ## Public datasets
 
