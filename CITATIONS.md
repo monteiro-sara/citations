@@ -38,16 +38,18 @@ _Last updated: 06 September 2026._
 
 9. **Monteiro, S.**, Berrington, A. P., & Schrantee, A. (2024, December 13). *Simultaneous dual-voxel functional magnetic resonance spectroscopy of the motor cortex at 7 T.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
-10. Schrantee, A., Auger, C., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* Workshop contribution.
+10. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
+
+11. Schrantee, A., Auger, C., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* Workshop contribution.
 
 ## Research software
 
-11. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
+12. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
 
-12. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
+13. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
 
-13. **Monteiro, S.** (2026). *CitRe.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
+14. **Monteiro, S.** (2026). *CitRe.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
 
 ## Public datasets
 
-14. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
+15. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
