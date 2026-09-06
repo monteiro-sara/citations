@@ -14,7 +14,7 @@ _Last updated: 06 September 2026._
 
 ## Preprints
 
-3. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Rethinking Gender Differences in Camouflaging: Multivariate Trait Associations Across Compensation, Masking, and Assimilation.* [Preprint].
+3. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Rethinking Gender Differences in Camouflaging: Multivariate Associations Across Compensation, Masking, and Assimilation.*  PsyArXiv, n.d. osf.io/preprints/psyarxiv/wrmja_v1. [Preprint].
 
 ## Manuscripts under internal review for submission
 
