@@ -14,7 +14,7 @@ _Last updated: 06 September 2026._
 
 3. Monteiro, S., Maillard, A., Louis, E., Hentzen, C., Al Chare, I., Baltassis, S., Adrien, V., & Garcin, B. (2026). **Towards a multidimensional exploration of functional neurological disorder.** [Manuscript in preparation].
 
-4. Monteiro, S., Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). **Rethinking the boundaries of camouflaging: A multivariate analysis of sex, empathizing, systemizing, and autistic traits.** [Manuscript in preparation].
+4. Monteiro, S., Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). **Rethinking Gender Differences in Camouflaging: Multivariate Trait Associations Across Compensation, Masking, and Assimilation** [Manuscript in preparation].
 
 5. Monteiro, S.*, van den Berg, J.*, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026). **Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.** [Manuscript in preparation].
 
