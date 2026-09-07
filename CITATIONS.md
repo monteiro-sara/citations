@@ -10,7 +10,7 @@ _Last updated: 06 September 2026._
 
 2. **Monteiro, S.**, Arunachalam, P.†, Pieperhoff, L.†, Tranfa, M., Masserini, F., Ritchie, C., Boada, M., Marquié, M., Vijverberg, J., Vandenberghe, R., Hanseeuw, B. J., Visser, P. J., Frisoni, G. B., Stephens, A., Farrar, G., Pardini, M., Roccatagliata, L., Jessen, F., Salvadó, G., Vállez-García, D., Pontillo, G., Luckett, E. S., Cole, J. H., Barkhof, F., Wink, A. M., Collij, L. E., & Lorenzini, L. (2026). *Amyloid PET similarity networks in preclinical Alzheimer’s disease reveal early dynamic topological reorganization.* Manuscript under review at *Brain Communications*.
 
-† Shared first authorship.
+† Equal authorship.
 
 ## Preprints
 
@@ -22,7 +22,7 @@ _Last updated: 06 September 2026._
 
 5. **Monteiro, S.**†, van den Berg, J.†, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026). *Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.* [Manuscript in preparation].
 
-† Shared first authorship.
+† Equal authorship.
 
 ## Manuscripts in preparation
 
@@ -30,7 +30,7 @@ _Last updated: 06 September 2026._
 
 7. van den Berg, J.†, **Monteiro, S.**†, Marquering, H. A., Reneman, L., Schrantee, A., & Caan, M. W. A. (2026). *Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.* [Manuscript in preparation].
 
-† Shared first authorship.
+† Equal authorship.
 
 ## Meeting & workshop contributions
 
