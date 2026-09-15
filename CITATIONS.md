@@ -28,7 +28,7 @@ _Last updated: 06 September 2026._
 
 6. **Monteiro, S.** et al. (2026). *NIM Studio: A local-first desktop environment for neuroimaging data organization and governance.* Manuscript in preparation for *Imaging Neuroscience, Software Toolbox*.
 
-7. van den Berg, J.†, **Monteiro, S.**†, Marquering, H. A., Reneman, L., Schrantee, A., & Caan, M. W. A. (2026). *Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.* [Manuscript in preparation].
+7. van den Berg, J.†, **Monteiro, S.**†, Marquering, H. A., Schrantee, A., & Caan, M. W. A. (2026). *Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.* [Manuscript in preparation].
 
 † Equal authorship.
 
