@@ -35,9 +35,9 @@ const SECTION_CONFIG = {
     category: "manuscript",
     kicker: "In preparation"
   },
-  "meeting & workshop contributions": {
+  "Conferences & workshop contributions": {
     category: "conference",
-    kicker: "Meetings"
+    kicker: "Conference"
   },
   "research software": {
     category: "software",
