@@ -6,19 +6,17 @@ _Last updated: 06 September 2026._
 
 1. **Monteiro, S.**, Dessenne, C., & Perquin, M. (2024). *Long COVID cognitive sequelae 6 months postinfection and beyond: A scoping review protocol.* *BMJ Open, 14*(6), e084798. https://doi.org/10.1136/bmjopen-2024-084798
 
-## Manuscript under peer review
+## Submitted Manuscripts / Under peer review
 
 2. **Monteiro, S.**, Arunachalam, P.†, Pieperhoff, L.†, Tranfa, M., Masserini, F., Ritchie, C., Boada, M., Marquié, M., Vijverberg, J., Vandenberghe, R., Hanseeuw, B. J., Visser, P. J., Frisoni, G. B., Stephens, A., Farrar, G., Pardini, M., Roccatagliata, L., Jessen, F., Salvadó, G., Vállez-García, D., Pontillo, G., Luckett, E. S., Cole, J. H., Barkhof, F., Wink, A. M., Collij, L. E., & Lorenzini, L. (2026). *Amyloid PET similarity networks in preclinical Alzheimer’s disease reveal early dynamic topological reorganization.* Manuscript under review at *Brain Communications*.
 
+3. **Monteiro, S.**, Maillard, A., Louis, E., Hentzen, C., Al Chare, I., Baltassis, S., Adrien, V., & Garcin, B. (2026). *Towards a multidimensional exploration of functional neurological disorder.*
+
+4. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Rethinking Gender Differences in Camouflaging: Multivariate Associations Across Compensation, Masking, and Assimilation.*  PsyArXiv, n.d. osf.io/preprints/psyarxiv/wrmja_v1. [Preprint].
+
 † Equal authorship.
 
-## Preprints
-
-3. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Rethinking Gender Differences in Camouflaging: Multivariate Associations Across Compensation, Masking, and Assimilation.*  PsyArXiv, n.d. osf.io/preprints/psyarxiv/wrmja_v1. [Preprint].
-
 ## Manuscripts under internal review for submission
-
-4. **Monteiro, S.**, Maillard, A., Louis, E., Hentzen, C., Al Chare, I., Baltassis, S., Adrien, V., & Garcin, B. (2026). *Towards a multidimensional exploration of functional neurological disorder.* [Manuscript in preparation].
 
 5. **Monteiro, S.**†, van den Berg, J.†, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026). *Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.* [Manuscript in preparation].
 
@@ -32,7 +30,7 @@ _Last updated: 06 September 2026._
 
 † Equal authorship.
 
-## Conferences & workshop contributions
+## International conferences, meetings, workshops
 
 8. **Monteiro, S.**, Arunachalam, P., Pieperhoff, L., Tranfa, M., Masserini, F., Wink, A. M., Collij, L. E., Barkhof, F., & Lorenzini, L. (2026, January 16). *Emergent network dynamics of amyloid-PET covariance in preclinical Alzheimer’s disease.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
