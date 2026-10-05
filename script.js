@@ -19,34 +19,37 @@ const SECTION_CONFIG = {
     category: "publication",
     kicker: "Published"
   },
+
   "submitted manuscripts / under peer review": {
     category: "submitted",
     kicker: "Under review"
   },
-  "manuscript under peer review": {
-    category: "manuscript",
-    kicker: "In review"
-  },
+
   "preprints": {
     category: "preprint",
     kicker: "Preprint"
   },
+
   "manuscripts under internal review for submission": {
     category: "manuscript",
     kicker: "Pre-submission"
   },
+
   "manuscripts in preparation": {
     category: "manuscript",
     kicker: "In preparation"
   },
-  "Conferences & workshop contributions": {
+
+  "international conferences, meetings, workshops": {
     category: "conference",
-    kicker: "Conference"
+    kicker: "Conference contributions"
   },
+
   "research software": {
     category: "software",
     kicker: "Open tools"
   },
+
   "public datasets": {
     category: "dataset",
     kicker: "Open data"
@@ -71,44 +74,99 @@ function escapeHTML(value = "") {
 
 function inferSectionConfig(heading) {
   const key = heading.trim().toLowerCase();
-  if (SECTION_CONFIG[key]) return SECTION_CONFIG[key];
 
-  if (key.includes("dataset") || key.includes("data")) {
-    return { category: "dataset", kicker: "Open data" };
+  if (SECTION_CONFIG[key]) {
+    return SECTION_CONFIG[key];
   }
-  if (key.includes("software") || key.includes("tool")) {
-    return { category: "software", kicker: "Open tools" };
+
+  if (
+    key.includes("submitted") ||
+    key.includes("under peer review")
+  ) {
+    return {
+      category: "submitted",
+      kicker: "Under review"
+    };
   }
+
+  if (
+    key.includes("dataset") ||
+    key.includes("data")
+  ) {
+    return {
+      category: "dataset",
+      kicker: "Open data"
+    };
+  }
+
+  if (
+    key.includes("software") ||
+    key.includes("tool")
+  ) {
+    return {
+      category: "software",
+      kicker: "Open tools"
+    };
+  }
+
   if (
     key.includes("meeting") ||
     key.includes("conference") ||
-    key.includes("workshop")
+    key.includes("workshop") ||
+    key.includes("symposium")
   ) {
-    return { category: "conference", kicker: "Meetings" };
-  }
-  if (key.includes("preprint")) {
-    return { category: "preprint", kicker: "Preprint" };
-  }
-  if (key.includes("publication") || key.includes("peer-reviewed")) {
-    return { category: "publication", kicker: "Published" };
+    return {
+      category: "conference",
+      kicker: "Conference contributions"
+    };
   }
 
-  return { category: "manuscript", kicker: "Manuscript" };
+  if (key.includes("preprint")) {
+    return {
+      category: "preprint",
+      kicker: "Preprint"
+    };
+  }
+
+  if (
+    key.includes("publication") ||
+    key.includes("peer-reviewed")
+  ) {
+    return {
+      category: "publication",
+      kicker: "Published"
+    };
+  }
+
+  return {
+    category: "manuscript",
+    kicker: "Manuscript"
+  };
 }
 
 function parseMarkdown(md) {
-  const lines = md.replace(/\r/g, "").split("\n");
+  const lines = md
+    .replace(/\r/g, "")
+    .split("\n");
+
   const parsedSections = [];
+
   let currentSection = null;
   let currentItem = null;
   let lastUpdated = "";
 
   function flushItem() {
-    if (currentItem && currentSection) {
-      currentItem.text = currentItem.text.trim();
+    if (
+      currentItem &&
+      currentSection
+    ) {
+      currentItem.text =
+        currentItem.text.trim();
 
       if (currentItem.text) {
-        currentSection.items.push(currentItem);
+        currentSection.items.push(
+          currentItem
+        );
       }
     }
 
@@ -118,7 +176,9 @@ function parseMarkdown(md) {
   for (const rawLine of lines) {
     const line = rawLine.trim();
 
-    const updatedMatch = line.match(/^_?Last updated:\s*(.+?)[._]*$/i);
+    const updatedMatch = line.match(
+      /^_?Last updated:\s*(.+?)[._]*$/i
+    );
 
     if (updatedMatch) {
       lastUpdated = updatedMatch[1]
@@ -128,13 +188,18 @@ function parseMarkdown(md) {
       continue;
     }
 
-    const headingMatch = line.match(/^##\s+(.+)$/);
+    const headingMatch = line.match(
+      /^##\s+(.+)$/
+    );
 
     if (headingMatch) {
       flushItem();
 
-      const heading = headingMatch[1].trim();
-      const config = inferSectionConfig(heading);
+      const heading =
+        headingMatch[1].trim();
+
+      const config =
+        inferSectionConfig(heading);
 
       currentSection = {
         heading,
@@ -144,13 +209,20 @@ function parseMarkdown(md) {
         notes: []
       };
 
-      parsedSections.push(currentSection);
+      parsedSections.push(
+        currentSection
+      );
+
       continue;
     }
 
-    if (!currentSection) continue;
+    if (!currentSection) {
+      continue;
+    }
 
-    const itemMatch = line.match(/^(\d+)\.\s+(.+)$/);
+    const itemMatch = line.match(
+      /^(\d+)\.\s+(.+)$/
+    );
 
     if (itemMatch) {
       flushItem();
@@ -165,7 +237,11 @@ function parseMarkdown(md) {
 
     if (/^[†‡§]\s*/.test(line)) {
       flushItem();
-      currentSection.notes.push(line);
+
+      currentSection.notes.push(
+        line
+      );
+
       continue;
     }
 
@@ -174,9 +250,11 @@ function parseMarkdown(md) {
       continue;
     }
 
-    // Allows a citation to wrap onto several Markdown lines.
+    // Allows a citation to wrap onto
+    // several Markdown lines.
     if (currentItem) {
-      currentItem.text += ` ${line}`;
+      currentItem.text +=
+        ` ${line}`;
     }
   }
 
@@ -184,8 +262,10 @@ function parseMarkdown(md) {
 
   return {
     lastUpdated,
+
     sections: parsedSections.filter(
-      (section) => section.items.length
+      (section) =>
+        section.items.length
     )
   };
 }
@@ -193,7 +273,10 @@ function parseMarkdown(md) {
 function cleanURL(url) {
   let cleaned = url.trim();
 
-  cleaned = cleaned.replace(/[),.;]+$/g, "");
+  cleaned = cleaned.replace(
+    /[),.;]+$/g,
+    ""
+  );
 
   if (!/^https?:\/\//i.test(cleaned)) {
     cleaned = `https://${cleaned}`;
@@ -205,25 +288,32 @@ function cleanURL(url) {
 function extractLinks(text) {
   const urls = [];
 
-  // Finds https links and bare URLs such as osf.io/preprints/...
+  // Finds https links and bare URLs
+  // such as osf.io/preprints/...
   const urlPattern =
     /(?:https?:\/\/[^\s]+|(?:[a-z0-9-]+\.)+[a-z]{2,}\/[^\s]+)/gi;
 
-  const withoutLinks = text.replace(urlPattern, (match) => {
-    const url = cleanURL(match);
+  const withoutLinks =
+    text.replace(
+      urlPattern,
+      (match) => {
+        const url =
+          cleanURL(match);
 
-    if (!urls.includes(url)) {
-      urls.push(url);
-    }
+        if (!urls.includes(url)) {
+          urls.push(url);
+        }
 
-    return "";
-  });
+        return "";
+      }
+    );
 
   return {
     text: withoutLinks
       .replace(/\s{2,}/g, " ")
       .replace(/\s+([.,;:])/g, "$1")
       .trim(),
+
     urls
   };
 }
@@ -232,15 +322,23 @@ function renderInlineMarkdown(text) {
   let html = escapeHTML(text);
 
   // Bold Markdown.
-  // Sara gets the existing self-author styling hook.
+  // Sara gets the existing
+  // self-author styling hook.
   html = html.replace(
     /\*\*([^*]+)\*\*/g,
     (_, content) => {
-      const plain = content.replace(/&amp;/g, "&");
+      const plain =
+        content.replace(
+          /&amp;/g,
+          "&"
+        );
 
-      const className = /Monteiro,\s*S\./i.test(plain)
-        ? ' class="self-author"'
-        : "";
+      const className =
+        /Monteiro,?\s*S\.?/i.test(
+          plain
+        )
+          ? ' class="self-author"'
+          : "";
 
       return `<strong${className}>${content}</strong>`;
     }
@@ -255,33 +353,55 @@ function renderInlineMarkdown(text) {
   return html;
 }
 
-function getStatus(section, citation) {
-  const heading = section.heading.toLowerCase();
-  const text = citation.toLowerCase();
+function getStatus(
+  section,
+  citation
+) {
+  const heading =
+    section.heading.toLowerCase();
 
-  if (section.category === "publication") {
+  const text =
+    citation.toLowerCase();
+
+  if (
+    section.category ===
+    "publication"
+  ) {
     return {
       className: "published",
       label: "Peer reviewed"
     };
   }
 
-  if (section.category === "preprint") {
+  if (
+    section.category ===
+    "submitted"
+  ) {
+    return {
+      className: "review",
+      label: "Under review"
+    };
+  }
+
+  if (
+    section.category ===
+    "preprint"
+  ) {
     return {
       className: "preprint",
       label: "Preprint"
     };
   }
 
-  if (section.category === "manuscript") {
-    if (heading.includes("peer review")) {
-      return {
-        className: "review",
-        label: "Under review"
-      };
-    }
-
-    if (heading.includes("internal review")) {
+  if (
+    section.category ===
+    "manuscript"
+  ) {
+    if (
+      heading.includes(
+        "internal review"
+      )
+    ) {
       return {
         className: "prep",
         label: "Internal review"
@@ -294,8 +414,13 @@ function getStatus(section, citation) {
     };
   }
 
-  if (section.category === "conference") {
-    if (text.includes("workshop")) {
+  if (
+    section.category ===
+    "conference"
+  ) {
+    if (
+      text.includes("workshop")
+    ) {
       return {
         className: "conference",
         label: "Workshop"
@@ -303,8 +428,6 @@ function getStatus(section, citation) {
     }
 
     if (
-      text.includes("ismrm") ||
-      text.includes("conference") ||
       text.includes("symposium")
     ) {
       return {
@@ -313,16 +436,41 @@ function getStatus(section, citation) {
       };
     }
 
+    if (
+      text.includes("ismrm") ||
+      text.includes("conference") ||
+      text.includes("congress")
+    ) {
+      return {
+        className: "conference",
+        label: "Conference"
+      };
+    }
+
+    if (
+      text.includes("meeting")
+    ) {
+      return {
+        className: "conference",
+        label: "Meeting"
+      };
+    }
+
     return {
       className: "conference",
-      label: "Meeting"
+      label: "Conference"
     };
   }
 
-  if (section.category === "software") {
+  if (
+    section.category ===
+    "software"
+  ) {
     if (
       text.includes("wiki") ||
-      text.includes("documentation")
+      text.includes(
+        "documentation"
+      )
     ) {
       return {
         className: "software",
@@ -336,7 +484,10 @@ function getStatus(section, citation) {
     };
   }
 
-  if (section.category === "dataset") {
+  if (
+    section.category ===
+    "dataset"
+  ) {
     return {
       className: "dataset",
       label: "Dataset"
@@ -350,131 +501,180 @@ function getStatus(section, citation) {
 }
 
 function linkLabel(url) {
-  const lower = url.toLowerCase();
+  const lower =
+    url.toLowerCase();
 
-  if (lower.includes("doi.org/")) {
+  if (
+    lower.includes("doi.org/")
+  ) {
     return "DOI ↗";
   }
 
-  if (lower.includes("osf.io/preprints/psyarxiv")) {
+  if (
+    lower.includes(
+      "osf.io/preprints/psyarxiv"
+    )
+  ) {
     return "PsyArXiv ↗";
   }
 
-  if (lower.includes("github.com/")) {
+  if (
+    lower.includes("github.com/")
+  ) {
     return "GitHub ↗";
   }
 
-  if (lower.includes("readthedocs.io")) {
+  if (
+    lower.includes(
+      "readthedocs.io"
+    )
+  ) {
     return "Website ↗";
   }
 
-  if (lower.includes("echo.ismrm.org")) {
+  if (
+    lower.includes(
+      "echo.ismrm.org"
+    )
+  ) {
     return "Program ↗";
   }
 
   return "Link ↗";
 }
 
-function renderSections(parsedSections) {
-  sectionsContainer.innerHTML = parsedSections
-    .map((section) => {
-      const itemsHTML = section.items
-        .map((item) => {
-          const { text, urls } = extractLinks(item.text);
-          const status = getStatus(section, text);
-          const index = String(item.number).padStart(2, "0");
+function renderSections(
+  parsedSections
+) {
+  sectionsContainer.innerHTML =
+    parsedSections
+      .map((section) => {
+        const itemsHTML =
+          section.items
+            .map((item) => {
+              const {
+                text,
+                urls
+              } =
+                extractLinks(
+                  item.text
+                );
 
-          const linksHTML = urls
-            .map(
-              (url) => `
-                <a
-                  href="${escapeHTML(url)}"
-                  target="_blank"
-                  rel="noopener"
+              const status =
+                getStatus(
+                  section,
+                  text
+                );
+
+              const index =
+                String(
+                  item.number
+                ).padStart(
+                  2,
+                  "0"
+                );
+
+              const linksHTML =
+                urls
+                  .map(
+                    (url) => `
+                      <a
+                        href="${escapeHTML(url)}"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        ${linkLabel(url)}
+                      </a>
+                    `
+                  )
+                  .join("");
+
+              return `
+                <article
+                  class="entry"
+                  data-category="${section.category}"
                 >
-                  ${linkLabel(url)}
-                </a>
+                  <div class="entry-index">
+                    ${index}
+                  </div>
+
+                  <div class="entry-body">
+                    <p class="citation">
+                      ${renderInlineMarkdown(text)}
+                    </p>
+
+                    <div class="entry-meta">
+                      <span
+                        class="status ${status.className}"
+                      >
+                        ${status.label}
+                      </span>
+
+                      ${linksHTML}
+
+                      <button
+                        class="copy-btn"
+                        type="button"
+                      >
+                        Copy citation
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              `;
+            })
+            .join("");
+
+        const notesHTML =
+          section.notes
+            .map(
+              (note) => `
+                <p class="note">
+                  ${renderInlineMarkdown(note)}
+                </p>
               `
             )
             .join("");
 
-          return `
-            <article
-              class="entry"
-              data-category="${section.category}"
-            >
-              <div class="entry-index">${index}</div>
-
-              <div class="entry-body">
-                <p class="citation">
-                  ${renderInlineMarkdown(text)}
+        return `
+          <section
+            class="citation-section"
+            data-section="${section.category}"
+          >
+            <div class="section-heading">
+              <div>
+                <p class="section-kicker">
+                  ${escapeHTML(section.kicker)}
                 </p>
 
-                <div class="entry-meta">
-                  <span class="status ${status.className}">
-                    ${status.label}
-                  </span>
-
-                  ${linksHTML}
-
-                  <button
-                    class="copy-btn"
-                    type="button"
-                  >
-                    Copy citation
-                  </button>
-                </div>
+                <h2>
+                  ${escapeHTML(section.heading)}
+                </h2>
               </div>
-            </article>
-          `;
-        })
-        .join("");
 
-      const notesHTML = section.notes
-        .map(
-          (note) => `
-            <p class="note">
-              ${renderInlineMarkdown(note)}
-            </p>
-          `
-        )
-        .join("");
-
-      return `
-        <section
-          class="citation-section"
-          data-section="${section.category}"
-        >
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">
-                ${escapeHTML(section.kicker)}
-              </p>
-
-              <h2>
-                ${escapeHTML(section.heading)}
-              </h2>
+              <span class="section-count">
+                ${section.items.length}
+              </span>
             </div>
 
-            <span class="section-count">
-              ${section.items.length}
-            </span>
-          </div>
+            ${itemsHTML}
 
-          ${itemsHTML}
-
-          ${notesHTML}
-        </section>
-      `;
-    })
-    .join("");
+            ${notesHTML}
+          </section>
+        `;
+      })
+      .join("");
 
   entries = [
-    ...document.querySelectorAll(".entry")
+    ...document.querySelectorAll(
+      ".entry"
+    )
   ];
 
   sections = [
-    ...document.querySelectorAll(".citation-section")
+    ...document.querySelectorAll(
+      ".citation-section"
+    )
   ];
 
   bindCopyButtons();
@@ -490,11 +690,14 @@ function updateView() {
   entries.forEach((entry) => {
     const matchesFilter =
       activeFilter === "all" ||
-      entry.dataset.category === activeFilter;
+      entry.dataset.category ===
+        activeFilter;
 
     const matchesSearch =
       !query ||
-      normalize(entry.textContent).includes(query);
+      normalize(
+        entry.textContent
+      ).includes(query);
 
     const visible =
       matchesFilter &&
@@ -507,70 +710,105 @@ function updateView() {
     }
   });
 
-  sections.forEach((section) => {
-    const visibleEntries = [
-      ...section.querySelectorAll(".entry")
-    ].filter((entry) => !entry.hidden);
+  sections.forEach(
+    (section) => {
+      const visibleEntries = [
+        ...section.querySelectorAll(
+          ".entry"
+        )
+      ].filter(
+        (entry) =>
+          !entry.hidden
+      );
 
-    section.hidden =
-      visibleEntries.length === 0;
+      section.hidden =
+        visibleEntries.length === 0;
 
-    const count =
-      section.querySelector(".section-count");
+      const count =
+        section.querySelector(
+          ".section-count"
+        );
 
-    if (count) {
-      count.textContent =
-        visibleEntries.length;
+      if (count) {
+        count.textContent =
+          visibleEntries.length;
+      }
     }
-  });
+  );
 
   emptyState.hidden =
     visibleCount !== 0;
 
   resultsStatus.textContent =
-    query || activeFilter !== "all"
+    query ||
+    activeFilter !== "all"
       ? `${visibleCount} citation${
-          visibleCount === 1 ? "" : "s"
+          visibleCount === 1
+            ? ""
+            : "s"
         } shown`
       : "";
 }
 
-function showToast(message = "Citation copied") {
+function showToast(
+  message = "Citation copied"
+) {
   toast.textContent = message;
-  toast.classList.add("show");
+
+  toast.classList.add(
+    "show"
+  );
 
   setTimeout(() => {
-    toast.classList.remove("show");
+    toast.classList.remove(
+      "show"
+    );
   }, 1400);
 }
 
 function bindCopyButtons() {
   document
-    .querySelectorAll(".copy-btn")
+    .querySelectorAll(
+      ".copy-btn"
+    )
     .forEach((button) => {
       button.addEventListener(
         "click",
         async () => {
-          const citation = button
-            .closest(".entry")
-            .querySelector(".citation")
-            .innerText
-            .trim();
+          const citation =
+            button
+              .closest(".entry")
+              .querySelector(
+                ".citation"
+              )
+              .innerText
+              .trim();
 
           try {
-            await navigator.clipboard.writeText(
-              citation
-            );
+            await navigator
+              .clipboard
+              .writeText(
+                citation
+              );
           } catch {
             const area =
-              document.createElement("textarea");
+              document.createElement(
+                "textarea"
+              );
 
-            area.value = citation;
+            area.value =
+              citation;
 
-            document.body.appendChild(area);
+            document.body
+              .appendChild(
+                area
+              );
+
             area.select();
 
-            document.execCommand("copy");
+            document.execCommand(
+              "copy"
+            );
 
             area.remove();
           }
@@ -583,7 +821,9 @@ function bindCopyButtons() {
 
 function preferredTheme() {
   const saved =
-    localStorage.getItem("citation-theme");
+    localStorage.getItem(
+      "citation-theme"
+    );
 
   if (saved) {
     return saved;
@@ -597,7 +837,8 @@ function preferredTheme() {
 }
 
 function setTheme(theme) {
-  document.documentElement.dataset.theme =
+  document.documentElement
+    .dataset.theme =
     theme;
 
   localStorage.setItem(
@@ -608,13 +849,15 @@ function setTheme(theme) {
 
 async function loadCitations() {
   try {
-    // Prevent stale Markdown responses.
-    const response = await fetch(
-      `${MD_PATH}?v=${Date.now()}`,
-      {
-        cache: "no-store"
-      }
-    );
+    // Prevent stale Markdown
+    // responses.
+    const response =
+      await fetch(
+        `${MD_PATH}?v=${Date.now()}`,
+        {
+          cache: "no-store"
+        }
+      );
 
     if (!response.ok) {
       throw new Error(
@@ -626,20 +869,30 @@ async function loadCitations() {
       await response.text();
 
     const parsed =
-      parseMarkdown(markdown);
+      parseMarkdown(
+        markdown
+      );
 
     const total =
       parsed.sections.reduce(
-        (sum, section) =>
-          sum + section.items.length,
+        (
+          sum,
+          section
+        ) =>
+          sum +
+          section.items.length,
         0
       );
 
-    renderSections(parsed.sections);
+    renderSections(
+      parsed.sections
+    );
 
     recordCount.textContent =
       `${total} record${
-        total === 1 ? "" : "s"
+        total === 1
+          ? ""
+          : "s"
       }`;
 
     updatedDate.textContent =
@@ -688,12 +941,14 @@ filters.forEach((button) => {
       activeFilter =
         button.dataset.filter;
 
-      filters.forEach((item) => {
-        item.classList.toggle(
-          "active",
-          item === button
-        );
-      });
+      filters.forEach(
+        (item) => {
+          item.classList.toggle(
+            "active",
+            item === button
+          );
+        }
+      );
 
       updateView();
     }
@@ -708,7 +963,8 @@ themeToggle.addEventListener(
   "click",
   () => {
     const next =
-      document.documentElement.dataset.theme ===
+      document.documentElement
+        .dataset.theme ===
       "dark"
         ? "light"
         : "dark";
