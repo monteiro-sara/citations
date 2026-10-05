@@ -42,14 +42,16 @@ _Last updated: 06 October 2026._
 
 12. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
 
+13. **Monteiro S.** *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* The Open Science in Action Symposium; Montreal, Canada; 2 November 2026. Scheduled for November 2026.
+
 ## Research software
 
-13. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
+14. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
 
-14. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
+15. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
 
-15. **Monteiro, S.** (2026). *CitRe.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
+16. **Monteiro, S.** (2026). *CitRe.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
 
 ## Public datasets
 
-16. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
+17. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
