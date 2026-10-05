@@ -19,6 +19,10 @@ const SECTION_CONFIG = {
     category: "publication",
     kicker: "Published"
   },
+  "submitted manuscripts / under peer review": {
+    category: "submitted",
+    kicker: "Under review"
+  },
   "manuscript under peer review": {
     category: "manuscript",
     kicker: "In review"
