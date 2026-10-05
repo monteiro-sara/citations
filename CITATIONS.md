@@ -40,14 +40,16 @@ _Last updated: 06 September 2026._
 
 11. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM Workshop.
 
+12. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
+
 ## Research software
 
-12. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
+13. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
 
-13. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
+14. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
 
-14. **Monteiro, S.** (2026). *CitRe.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
+15. **Monteiro, S.** (2026). *CitRe.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
 
 ## Public datasets
 
-15. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
+16. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
