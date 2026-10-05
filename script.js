@@ -300,7 +300,8 @@ function getStatus(section, citation) {
 
     if (
       text.includes("ismrm") ||
-      text.includes("conference")
+      text.includes("conference") ||
+      text.includes("symposium")
     ) {
       return {
         className: "conference",
