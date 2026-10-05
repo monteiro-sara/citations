@@ -1,6 +1,6 @@
 # Sara Monteiro — Citation List
 
-_Last updated: 06 September 2026._
+_Last updated: 06 October 2026._
 
 ## Peer-reviewed publication
 
