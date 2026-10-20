@@ -38,7 +38,7 @@ _Last updated: 06 October 2026._
 
 10. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
 
-11. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM Workshop.
+11. Auger, C., Monteiro, S., Naue, T., Cocking, D., Berrington, A., Clarke, W., & Schrantee, A. (2026, October 18). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7T* [Poster presentation]. MRS Workshop, Kuşadası, Turkey.
 
 12. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
 
