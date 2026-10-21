@@ -42,7 +42,7 @@ _Last updated: 06 October 2026._
 
 12. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
 
-13. **Monteiro S.** *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* The Open Science in Action Symposium; Montreal, Canada; 2 November 2026. Scheduled for November 2026.
+13. **Monteiro S.** *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* The Open Science in Action Symposium (OSIA); Montreal, Canada; 2 November 2026. Scheduled for November 2026.
 
 ## Research software
 
