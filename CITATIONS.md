@@ -30,19 +30,19 @@ _Last updated: 06 October 2026._
 
 † Equal authorship.
 
-## International conferences, meetings, workshops
+## International conferences, meetings, presentations & panels, workshops
 
-8. **Monteiro, S.**, Arunachalam, P., Pieperhoff, L., Tranfa, M., Masserini, F., Wink, A. M., Collij, L. E., Barkhof, F., & Lorenzini, L. (2026, January 16). *Emergent network dynamics of amyloid-PET covariance in preclinical Alzheimer’s disease.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
+8. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
 
-9. **Monteiro, S.**, Berrington, A. P., & Schrantee, A. (2024, December 13). *Simultaneous dual-voxel functional magnetic resonance spectroscopy of the motor cortex at 7 T.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
+9. **Monteiro S.** *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience - Collaborative Use of Open Science Data Management Tools.* The Open Science in Action Symposium (OSIA); Montreal, Canada; 2 November 2026. [Presentation & Panel discussion https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872]
 
-10. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
+10. **Monteiro, S.**, Arunachalam, P., Pieperhoff, L., Tranfa, M., Masserini, F., Wink, A. M., Collij, L. E., Barkhof, F., & Lorenzini, L. (2026, January 16). *Emergent network dynamics of amyloid-PET covariance in preclinical Alzheimer’s disease.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
-11. Auger, C., **Monteiro, S.**, Naue, T., Cocking, D., Berrington, A., Clarke, W., & Schrantee, A. (2026, October 18). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7T* [Poster presentation]. MRS Workshop, Kuşadası, Turkey.
+11. **Monteiro, S.**, Berrington, A. P., & Schrantee, A. (2024, December 13). *Simultaneous dual-voxel functional magnetic resonance spectroscopy of the motor cortex at 7 T.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
-12. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
+12. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
 
-13. **Monteiro S.** *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* The Open Science in Action Symposium (OSIA); Montreal, Canada; 2 November 2026. Scheduled for November 2026.
+13. Auger, C., **Monteiro, S.**, Naue, T., Cocking, D., Berrington, A., Clarke, W., & Schrantee, A. (2026, October 18). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7T* [Poster presentation]. MRS Workshop, Kuşadası, Turkey.
 
 ## Research software
 
