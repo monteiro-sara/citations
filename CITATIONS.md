@@ -22,7 +22,7 @@ _Last updated: 08 November 2026._
 
 5. **Monteiro, S.**†, van den Berg, J.†, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. *Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.*
 
-6. Al Chare, I., Palisson, J., Mhanna, E., Maillard, A., Narme, P., **Monteiro, S.**, Benrahmoune, K., & Joly, C., Garcin, B. *Neuropsychological Inconsistencies as Positive Signs of Functional Cognitive Disorder.*
+6. Al Chare, I., Palisson, J., Mhanna, E., Maillard, A., Narme, P., **Monteiro, S.**, Benrahmoune, K., Joly, C., & Garcin, B. *Neuropsychological Inconsistencies as Positive Signs of Functional Cognitive Disorder.*
 
 † Equal authorship.
 
