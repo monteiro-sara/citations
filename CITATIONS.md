@@ -12,9 +12,11 @@ _Last updated: 08 November 2026._
 
 3. **Monteiro, S.**, Maillard, A., Louis, E., Hentzen, C., Al Chare, I., Baltassis, S., Adrien, V., & Garcin, B. (2026). *Towards a multidimensional exploration of functional neurological disorder.*
 
-4. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Rethinking Gender Differences in Camouflaging: Multivariate Associations Across Compensation, Masking, and Assimilation.* PsyArXiv, n.d. osf.io/preprints/psyarxiv/wrmja_v1. [Preprint].
-
 † Equal authorship.
+
+## Preprints
+
+4. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Rethinking Gender Differences in Camouflaging: Multivariate Associations Across Compensation, Masking, and Assimilation.* PsyArXiv, n.d. osf.io/preprints/psyarxiv/wrmja_v1. [Preprint].
 
 ## Manuscripts under internal review for submission
 

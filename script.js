@@ -2,6 +2,8 @@ const MD_PATH = "./CITATIONS.md";
 
 const searchInput = document.querySelector("#search-input");
 const filters = [...document.querySelectorAll(".filter")];
+const roleFilters = [...document.querySelectorAll(".role-filter")];
+const clearRolesButton = document.querySelector("#clear-roles");
 const sectionsContainer = document.querySelector("#citation-sections");
 const emptyState = document.querySelector("#empty-state");
 const resultsStatus = document.querySelector("#results-status");
@@ -11,6 +13,7 @@ const recordCount = document.querySelector("#record-count");
 const updatedDate = document.querySelector("#updated-date");
 
 let activeFilter = "all";
+const activeRoles = new Set();
 let entries = [];
 let sections = [];
 
@@ -41,6 +44,11 @@ const SECTION_CONFIG = {
   },
 
   "international conferences, meetings, workshops": {
+    category: "conference",
+    kicker: "Conference contributions"
+  },
+
+  "conference contributions": {
     category: "conference",
     kicker: "Conference contributions"
   },
@@ -153,6 +161,7 @@ function parseMarkdown(md) {
 
   let currentSection = null;
   let currentItem = null;
+  let currentSubheading = "";
   let lastUpdated = "";
 
   function flushItem() {
@@ -212,11 +221,23 @@ function parseMarkdown(md) {
       parsedSections.push(
         currentSection
       );
+      currentSubheading = "";
 
       continue;
     }
 
     if (!currentSection) {
+      continue;
+    }
+
+    const subheadingMatch = line.match(
+      /^###\s+(.+)$/
+    );
+
+    if (subheadingMatch) {
+      flushItem();
+      currentSubheading =
+        subheadingMatch[1].trim();
       continue;
     }
 
@@ -229,7 +250,8 @@ function parseMarkdown(md) {
 
       currentItem = {
         number: Number(itemMatch[1]),
-        text: itemMatch[2].trim()
+        text: itemMatch[2].trim(),
+        subheading: currentSubheading
       };
 
       continue;
@@ -286,36 +308,111 @@ function cleanURL(url) {
 }
 
 function extractLinks(text) {
-  const urls = [];
+  const links = [];
+  const seen = new Set();
 
-  // Finds https links and bare URLs
-  // such as osf.io/preprints/...
-  const urlPattern =
+  function addLink(rawURL, label = "") {
+    const url = cleanURL(rawURL);
+    if (!seen.has(url)) {
+      links.push({ url, label });
+      seen.add(url);
+    }
+  }
+
+  // Consume the *whole* Markdown link first, otherwise
+  // extracting its URL leaves a broken [label]() behind.
+  let cleaned = text.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi,
+    (_, label, url) => {
+      addLink(url, label);
+      return "";
+    }
+  );
+
+  // Also recognise standalone DOIs, GitHub URLs and
+  // bare domains such as osf.io/preprints/...
+  const bareURLPattern =
     /(?:https?:\/\/[^\s]+|(?:[a-z0-9-]+\.)+[a-z]{2,}\/[^\s]+)/gi;
-
-  const withoutLinks =
-    text.replace(
-      urlPattern,
-      (match) => {
-        const url =
-          cleanURL(match);
-
-        if (!urls.includes(url)) {
-          urls.push(url);
-        }
-
-        return "";
-      }
-    );
+  cleaned = cleaned.replace(bareURLPattern, (match) => {
+    addLink(match);
+    return "";
+  });
 
   return {
-    text: withoutLinks
+    text: cleaned
+      .replace(/\(\s*\)/g, "")
       .replace(/\s{2,}/g, " ")
       .replace(/\s+([.,;:])/g, "$1")
       .trim(),
-
-    urls
+    links
   };
+}
+
+function getItemCategory(section, item) {
+  // Preprints are sometimes placed under a broader
+  // manuscript heading in older CITATIONS.md versions.
+  if (/\[Preprint\]|PsyArXiv/i.test(item.text)) {
+    return "preprint";
+  }
+  return section.category;
+}
+
+function describeContribution(item) {
+  const explicit = [];
+  const text = item.text.replace(
+    /\*\*\[([^\]]+)\]\*\*/g,
+    (_, label) => {
+      explicit.push(label);
+      return "";
+    }
+  ).replace(
+    /\[(?:Preprint|Poster presentation|Manuscript in preparation|Computer software|Dataset)\]/gi,
+    ""
+  );
+  const copyText = item.text
+    .replace(/\*\*/g, "")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/gi, "$1 ($2)")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+
+  const heading = normalize(item.subheading || "");
+  const roleText = normalize(explicit.join(" "));
+  const roles = [];
+
+  if (heading.includes("invited oral") || roleText.includes("invited speaker")) {
+    roles.push("speaker");
+  }
+  if (heading.includes("invited panel") || roleText.includes("invited panelist")) {
+    roles.push("panelist");
+  }
+
+  // Author position applies to scholarly and software
+  // outputs, not to a solo invitation to speak.
+  let authorship = "";
+  if (!roles.includes("speaker") && !roles.includes("panelist")) {
+    const title = text.match(/(^|[^*])\*[^*]+\*(?!\*)/);
+    const authors = (title ? text.slice(0, title.index) : text)
+      .replace(/\*\*/g, "")
+      .trim();
+    const saraIndex = authors.search(/Monteiro,?\s*S\.?/i);
+
+    if (saraIndex >= 0) {
+      const lead = /^Monteiro,?\s*S\.?/i.test(authors);
+      const precedingAuthors = authors.slice(0, saraIndex);
+      const saraDesignation = authors.slice(saraIndex, saraIndex + 24);
+      const equalFirst = !lead &&
+        precedingAuthors.includes("†") &&
+        /Monteiro,?\s*S\.?\s*†/i.test(saraDesignation);
+
+      authorship = equalFirst ? "Equal first author" :
+        lead ? "First author" : "Co-author";
+      roles.push(lead || equalFirst ? "first-author" : "co-author");
+    }
+  }
+
+  const roleDetail = explicit[0] || "";
+  return { text: text.trim(), roles, authorship, roleDetail, copyText };
 }
 
 function renderInlineMarkdown(text) {
@@ -355,7 +452,10 @@ function renderInlineMarkdown(text) {
 
 function getStatus(
   section,
-  citation
+  citation,
+  item,
+  roles,
+  category
 ) {
   const heading =
     section.heading.toLowerCase();
@@ -364,7 +464,7 @@ function getStatus(
     citation.toLowerCase();
 
   if (
-    section.category ===
+    category ===
     "publication"
   ) {
     return {
@@ -374,7 +474,7 @@ function getStatus(
   }
 
   if (
-    section.category ===
+    category ===
     "submitted"
   ) {
     return {
@@ -384,7 +484,7 @@ function getStatus(
   }
 
   if (
-    section.category ===
+    category ===
     "preprint"
   ) {
     return {
@@ -394,7 +494,7 @@ function getStatus(
   }
 
   if (
-    section.category ===
+    category ===
     "manuscript"
   ) {
     if (
@@ -415,9 +515,30 @@ function getStatus(
   }
 
   if (
-    section.category ===
+    category ===
     "conference"
   ) {
+    if (roles.includes("speaker")) {
+      return {
+        className: "invited",
+        label: "Invited speaker"
+      };
+    }
+
+    if (roles.includes("panelist")) {
+      return {
+        className: "invited",
+        label: "Invited panelist"
+      };
+    }
+
+    if (/\bposter presentation\b/i.test(item.text)) {
+      return {
+        className: "conference",
+        label: "Poster"
+      };
+    }
+
     if (
       text.includes("workshop")
     ) {
@@ -463,7 +584,7 @@ function getStatus(
   }
 
   if (
-    section.category ===
+    category ===
     "software"
   ) {
     if (
@@ -485,7 +606,7 @@ function getStatus(
   }
 
   if (
-    section.category ===
+    category ===
     "dataset"
   ) {
     return {
@@ -543,87 +664,85 @@ function linkLabel(url) {
   return "Link ↗";
 }
 
+function renderEntry(section, item) {
+  const contribution = describeContribution(item);
+  const { text, links } = extractLinks(contribution.text);
+  const category = getItemCategory(section, item);
+  const status = getStatus(
+    section, text, item, contribution.roles, category
+  );
+  const index = String(item.number).padStart(2, "0");
+
+  const linksHTML = links.map(({ url, label }) => `
+    <a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">
+      ${escapeHTML(label || linkLabel(url))}${label ? " ↗" : ""}
+    </a>
+  `).join("");
+
+  const authorshipHTML = contribution.authorship ? `
+    <span class="authorship-tag">
+      ${escapeHTML(contribution.authorship)}
+    </span>
+  ` : "";
+
+  const detail = contribution.roleDetail
+    .replace(/^Invited (?:speaker|panelist)\s*[:—-]\s*/i, "")
+    .trim();
+  const detailHTML = detail && !/^poster presentation$/i.test(detail)
+    ? `<span class="role-detail">${escapeHTML(detail)}</span>`
+    : "";
+
+  return `
+    <article
+      class="entry"
+      data-category="${category}"
+      data-roles="${contribution.roles.join(" ")}"
+      data-copy-text="${escapeHTML(contribution.copyText)}"
+    >
+      <div class="entry-index">${index}</div>
+      <div class="entry-body">
+        <p class="citation">${renderInlineMarkdown(text)}</p>
+        <div class="entry-meta">
+          <span class="status ${status.className}">
+            ${status.label}
+          </span>
+          ${authorshipHTML}
+          ${detailHTML}
+          ${linksHTML}
+          <button class="copy-btn" type="button">Copy citation</button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
 function renderSections(
   parsedSections
 ) {
   sectionsContainer.innerHTML =
     parsedSections
       .map((section) => {
-        const itemsHTML =
-          section.items
-            .map((item) => {
-              const {
-                text,
-                urls
-              } =
-                extractLinks(
-                  item.text
-                );
+        const groups = [];
+        for (const item of section.items) {
+          const heading = item.subheading || "";
+          let group = groups[groups.length - 1];
+          if (!group || group.heading !== heading) {
+            group = { heading, items: [] };
+            groups.push(group);
+          }
+          group.items.push(item);
+        }
 
-              const status =
-                getStatus(
-                  section,
-                  text
-                );
-
-              const index =
-                String(
-                  item.number
-                ).padStart(
-                  2,
-                  "0"
-                );
-
-              const linksHTML =
-                urls
-                  .map(
-                    (url) => `
-                      <a
-                        href="${escapeHTML(url)}"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        ${linkLabel(url)}
-                      </a>
-                    `
-                  )
-                  .join("");
-
-              return `
-                <article
-                  class="entry"
-                  data-category="${section.category}"
-                >
-                  <div class="entry-index">
-                    ${index}
-                  </div>
-
-                  <div class="entry-body">
-                    <p class="citation">
-                      ${renderInlineMarkdown(text)}
-                    </p>
-
-                    <div class="entry-meta">
-                      <span
-                        class="status ${status.className}"
-                      >
-                        ${status.label}
-                      </span>
-
-                      ${linksHTML}
-
-                      <button
-                        class="copy-btn"
-                        type="button"
-                      >
-                        Copy citation
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              `;
-            })
-            .join("");
+        const itemsHTML = groups.map((group) => `
+          <div class="citation-subgroup">
+            ${group.heading ? `
+              <h3 class="subsection-heading">
+                ${escapeHTML(group.heading)}
+              </h3>
+            ` : ""}
+            ${group.items.map((item) => renderEntry(section, item)).join("")}
+          </div>
+        `).join("");
 
         const notesHTML =
           section.notes
@@ -693,6 +812,10 @@ function updateView() {
       entry.dataset.category ===
         activeFilter;
 
+    const itemRoles = entry.dataset.roles.split(" ").filter(Boolean);
+    const matchesRole = activeRoles.size === 0 ||
+      [...activeRoles].some((role) => itemRoles.includes(role));
+
     const matchesSearch =
       !query ||
       normalize(
@@ -701,6 +824,7 @@ function updateView() {
 
     const visible =
       matchesFilter &&
+      matchesRole &&
       matchesSearch;
 
     entry.hidden = !visible;
@@ -712,6 +836,11 @@ function updateView() {
 
   sections.forEach(
     (section) => {
+      section.querySelectorAll(".citation-subgroup").forEach((group) => {
+        group.hidden = ![...group.querySelectorAll(".entry")]
+          .some((entry) => !entry.hidden);
+      });
+
       const visibleEntries = [
         ...section.querySelectorAll(
           ".entry"
@@ -741,12 +870,9 @@ function updateView() {
 
   resultsStatus.textContent =
     query ||
-    activeFilter !== "all"
-      ? `${visibleCount} citation${
-          visibleCount === 1
-            ? ""
-            : "s"
-        } shown`
+    activeFilter !== "all" ||
+    activeRoles.size > 0
+      ? `${visibleCount} of ${entries.length} citations shown`
       : "";
 }
 
@@ -778,11 +904,7 @@ function bindCopyButtons() {
           const citation =
             button
               .closest(".entry")
-              .querySelector(
-                ".citation"
-              )
-              .innerText
-              .trim();
+              .dataset.copyText;
 
           try {
             await navigator
@@ -953,6 +1075,34 @@ filters.forEach((button) => {
       updateView();
     }
   );
+});
+
+function syncRoleButtons() {
+  roleFilters.forEach((button) => {
+    const selected = activeRoles.has(button.dataset.role);
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+  clearRolesButton.hidden = activeRoles.size === 0;
+}
+
+roleFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    const role = button.dataset.role;
+    if (activeRoles.has(role)) {
+      activeRoles.delete(role);
+    } else {
+      activeRoles.add(role);
+    }
+    syncRoleButtons();
+    updateView();
+  });
+});
+
+clearRolesButton.addEventListener("click", () => {
+  activeRoles.clear();
+  syncRoleButtons();
+  updateView();
 });
 
 setTheme(

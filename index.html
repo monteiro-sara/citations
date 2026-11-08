@@ -7,7 +7,7 @@
   <meta name="author" content="Sara Monteiro">
   <meta name="theme-color" content="#0b0d10">
   <title>Sara Monteiro — Citation List</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20261108">
 </head>
 <body>
   <header class="site-header">
@@ -42,7 +42,7 @@
         <input id="search-input" type="search" placeholder="Search author, title, venue, year…" autocomplete="off">
       </label>
 
-      <div class="filters" role="group" aria-label="Filter citations">
+      <div class="filters" role="group" aria-label="Filter citations by output type">
         <button class="filter active" type="button" data-filter="all">All</button>
         <button class="filter" type="button" data-filter="publication">Publications</button>
         <button class="filter" type="button" data-filter="submitted">Submitted</button>
@@ -51,6 +51,17 @@
         <button class="filter" type="button" data-filter="conference">Conferences</button>
         <button class="filter" type="button" data-filter="software">Software</button>
         <button class="filter" type="button" data-filter="dataset">Datasets</button>
+      </div>
+
+      <div class="role-controls">
+        <span class="filter-label">Contribution</span>
+        <div class="role-filters" role="group" aria-label="Filter citations by contribution role">
+          <button class="role-filter" type="button" data-role="speaker" aria-pressed="false">Invited speaker</button>
+          <button class="role-filter" type="button" data-role="panelist" aria-pressed="false">Panelist</button>
+          <button class="role-filter" type="button" data-role="first-author" aria-pressed="false">First author</button>
+          <button class="role-filter" type="button" data-role="co-author" aria-pressed="false">Co-author</button>
+        </div>
+        <button id="clear-roles" class="clear-roles" type="button" hidden>Clear roles</button>
       </div>
     </section>
 
@@ -73,6 +84,6 @@
   </footer>
 
   <div class="toast" role="status" aria-live="polite" aria-atomic="true">Citation copied</div>
-  <script src="./script.js"></script>
+  <script src="./script.js?v=20261108"></script>
 </body>
 </html>
