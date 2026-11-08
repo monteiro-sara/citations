@@ -385,7 +385,7 @@ h1 {
 .status.preprint { background: color-mix(in srgb, #6246c7 13%, transparent); color: #5740ad; }
 .status.prep { background: color-mix(in srgb, #7d6bff 13%, transparent); color: #6756e8; }
 .status.conference { background: color-mix(in srgb, #0a9e77 13%, transparent); color: #087e60; }
-.status.invited { background: color-mix(in srgb, #976add 16%, transparent); color: #7950bd; }
+.status.invited { background: color-mix(in srgb, #0a9e77 13%, transparent); color: #087e60; }
 .status.software { background: color-mix(in srgb, #1281d9 13%, transparent); color: #0e6fb9; }
 .status.dataset { background: color-mix(in srgb, #c34a77 13%, transparent); color: #aa3d68; }
 
@@ -393,7 +393,7 @@ html[data-theme="dark"] .status.review { color: #e9b968; }
 html[data-theme="dark"] .status.preprint { color: #b8a6ff; }
 html[data-theme="dark"] .status.prep { color: #b2a7ff; }
 html[data-theme="dark"] .status.conference { color: #6ed9b9; }
-html[data-theme="dark"] .status.invited { color: #cbb1ff; }
+html[data-theme="dark"] .status.invited { color: #6ed9b9; }
 html[data-theme="dark"] .status.software { color: #74baf0; }
 html[data-theme="dark"] .status.dataset { color: #ef91b7; }
 
