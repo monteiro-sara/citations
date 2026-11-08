@@ -18,17 +18,17 @@ _Last updated: 08 November 2026._
 
 ## Manuscripts under internal review for submission
 
-5. **Monteiro, S.**†, van den Berg, J.†, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026). *Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.* [Manuscript in preparation].
+5. **Monteiro, S.**†, van den Berg, J.†, Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. *Pharmacotype classification in a multicohort ADHD study using a stacked resting-state MRI CNN.*
 
-6. Chare, I. A., Palisson, J., Mhanna, E., Maillard, A., Narme, P., **Monteiro, S.**, Benrahmoune, K., & Joly, C. (n.d.). *Neuropsychological Inconsistencies as Positive Signs of Functional Cognitive Disorder.* [Manuscript under internal review].
+6. Al Chare, I., Palisson, J., Mhanna, E., Maillard, A., Narme, P., **Monteiro, S.**, Benrahmoune, K., & Joly, C., Garcin, B. *Neuropsychological Inconsistencies as Positive Signs of Functional Cognitive Disorder.*
 
 † Equal authorship.
 
 ## Manuscripts in preparation
 
-7. **Monteiro, S.** et al. (2026). *NIM Studio: A local-first desktop environment for neuroimaging data organization and governance.* Manuscript in preparation for *Imaging Neuroscience, Software Toolbox*.
+7. **Monteiro, S.** et al. (n.d.). *NIM Studio: A local-first desktop environment for neuroimaging data organization and governance.* Manuscript in preparation for *Imaging Neuroscience, Software Toolbox*.
 
-8. van den Berg, J.†, **Monteiro, S.**†, Marquering, H. A., Schrantee, A., & Caan, M. W. A. (2026). *Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.* [Manuscript in preparation].
+8. van den Berg, J.†, **Monteiro, S.**†, Marquering, H. A., Schrantee, A., & Caan, M. W. A. *Regional fMRI measures across denoising pipelines in ADHD-200: Distinguishing artefact removal from signal attenuation.* [Manuscript in preparation].
 
 9. **Monteiro, S.**, et al. (n.d.). *Multiplex Covariance Predictions of Network Vulnerability and Resilience in FTD.* [Manuscript in preparation].
 
@@ -40,17 +40,17 @@ _Last updated: 08 November 2026._
 
 ### Invited oral presentations
 
-11. **Monteiro, S.** (2026, November 2). *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* Open Science in Action Symposium (OSIA), Montréal, Canada. **[Invited speaker — 15-minute oral presentation]**. [Programme](https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872)
+11. **Monteiro, S.** (2026, November 2). *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* Open Science in Action Symposium (OSIA), Montréal, Canada. **[Invited speaker: 15-minute oral presentation]** ([event programme](https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872)).
 
 ### Invited panel discussions
 
-12. **Monteiro, S.** (2026, November 2). *Collaborative Use of Open Science Data Management Tools.* Open Science in Action Symposium (OSIA), Montréal, Canada. **[Invited panelist — 15-minute panel discussion]**. [Programme](https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872)
+12. **Monteiro, S.** (2026, November 2). *Collaborative Use of Open Science Data Management Tools.* Open Science in Action Symposium (OSIA), Montréal, Canada. **[Invited panelist: 15-minute panel discussion]** ([event programme](https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872)).
 
-13. **Monteiro, S.** (2026, November 12). *CLARA Roundtable with French Science, Business and Industry.* CLARA Days 2026, Paris, France. **[Invited panelist]**. [Event](https://www.clara-center.eu/clara-roundtable-paris-2026)
+13. **Monteiro, S.** (2026, November 12). *CLARA Roundtable with French Science, Business and Industry.* CLARA Days 2026, Embassy of the Czech Republic, Paris, France. **[Invited panelist]** ([event details](https://www.clara-center.eu/clara-roundtable-paris-2026)).
 
 ### Scientific conference presentations and posters
 
-14. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health.
+14. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health, Paris Brain Institute (ICM), Paris, France, 13 November 2026. **[Poster presentation]** ([symposium programme](https://www.clara-center.eu/clara-symposium-2026)).
 
 15. **Monteiro, S.**, Arunachalam, P., Pieperhoff, L., Tranfa, M., Masserini, F., Wink, A. M., Collij, L. E., Barkhof, F., & Lorenzini, L. (2026, January 16). *Emergent network dynamics of amyloid-PET covariance in preclinical Alzheimer’s disease.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
@@ -60,13 +60,13 @@ _Last updated: 08 November 2026._
 
 18. Auger, C., **Monteiro, S.**, Naue, T., Cocking, D., Berrington, A., Clarke, W., & Schrantee, A. (2026, October 18). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7T* [Poster presentation]. MRS Workshop, Kuşadası, Turkey.
 
-## Open-source software
+## Research software
 
 19. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
 
 20. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
 
-21. **Monteiro, S.** (2026). *CitRe Plugin.* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
+21. **Monteiro, S.** (2026). *CitRe (Plugin).* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
 
 ## Public datasets
 
