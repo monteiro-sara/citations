@@ -50,26 +50,30 @@ _Last updated: 11 November 2026._
 
 13. **Monteiro, S.** (2026, November 2). *Collaborative Use of Open Science Data Management Tools.* Open Science in Action Symposium (OSIA), Montréal, Canada. **[Invited panelist: 15-minute panel discussion]** ([event programme](https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872)).
 
+### Scientific working tables and research collaboration
+
+14. **Monteiro, S.** (2026, November 12). *Infrastructure, AI and Joint Experimentation.* CLARA Roundtable with French Science, Business and Industry, Embassy of the Czech Republic, Paris, France. **[Scientific working-table participant — strategic exchange on EuroHPC and quantum computing resources, digital twins, and cross-institutional AI experimentation]** ([event programme](https://www.clara-center.eu/clara-roundtable-paris-2026)).
+
 ### Scientific conference presentations and posters
 
-14. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health, Paris Brain Institute (ICM), Paris, France, 13 November 2026. **[Poster presentation]** ([symposium programme](https://www.clara-center.eu/clara-symposium-2026)).
+15. **Monteiro S**, van den Berg J, Vansina E, Reneman L, Caan MWA, Schrantee A. *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health, Paris Brain Institute (ICM), Paris, France, 13 November 2026. **[Poster presentation]** ([symposium programme](https://www.clara-center.eu/clara-symposium-2026)).
 
-15. **Monteiro, S.**, Arunachalam, P., Pieperhoff, L., Tranfa, M., Masserini, F., Wink, A. M., Collij, L. E., Barkhof, F., & Lorenzini, L. (2026, January 16). *Emergent network dynamics of amyloid-PET covariance in preclinical Alzheimer’s disease.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
+16. **Monteiro, S.**, Arunachalam, P., Pieperhoff, L., Tranfa, M., Masserini, F., Wink, A. M., Collij, L. E., Barkhof, F., & Lorenzini, L. (2026, January 16). *Emergent network dynamics of amyloid-PET covariance in preclinical Alzheimer’s disease.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
-16. **Monteiro, S.**, Berrington, A. P., & Schrantee, A. (2024, December 13). *Simultaneous dual-voxel functional magnetic resonance spectroscopy of the motor cortex at 7 T.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
+17. **Monteiro, S.**, Berrington, A. P., & Schrantee, A. (2024, December 13). *Simultaneous dual-voxel functional magnetic resonance spectroscopy of the motor cortex at 7 T.* Amsterdam Neuroscience Annual Meeting, Amsterdam, the Netherlands.
 
-17. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
+18. Schrantee, A., Naue, T., **Monteiro, S.**, Clarke, W. T., & Berrington, A. P. (2026, May). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7 T.* ISMRM 2026 Annual Meeting, Cape Town, South Africa. https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/752
 
-18. Auger, C., **Monteiro, S.**, Naue, T., Cocking, D., Berrington, A., Clarke, W., & Schrantee, A. (2026, October 18). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7T* [Poster presentation]. MRS Workshop, Kuşadası, Turkey.
+19. Auger, C., **Monteiro, S.**, Naue, T., Cocking, D., Berrington, A., Clarke, W., & Schrantee, A. (2026, October 18). *Simultaneous two-voxel fMRS and fMRI of the motor cortex at 7T* [Poster presentation]. MRS Workshop, Kuşadası, Turkey.
 
 ## Research software
 
-19. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
+20. **Monteiro, S.** (2026). *NIM Studio: Beta release 0.1.0* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21296291
 
-20. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
+21. **Monteiro, S.** (2026). *NIM Studio Wiki.* https://nim-studio.readthedocs.io/en/latest/index.html
 
-21. **Monteiro, S.** (2026). *CitRe (Plugin).* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
+22. **Monteiro, S.** (2026). *CitRe (Plugin).* v1.0.0 [Computer software]. https://github.com/CitRe-plugin
 
 ## Public datasets
 
-22. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
+23. **Monteiro, S.**, Ambraß, L., de Sousa Fernandes Perna, E., Blokland, A., & Stauder, J. (2026). *Dataset: Camouflaging, Autism Traits, Empathizing and Systemizing in a Neurotypical Sample - Maastricht University* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.22423955
