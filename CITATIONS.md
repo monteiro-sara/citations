@@ -44,9 +44,11 @@ _Last updated: 11 November 2026._
 
 11. **Monteiro, S.** (2026, November 2). *NIM Studio: Bridging Data Management, Neuroinformatics, and Open Science in Modern Neuroscience.* Open Science in Action Symposium (OSIA), Montréal, Canada. **[Invited speaker: 15-minute oral presentation]** ([event programme](https://event.fourwaves.com/osia2026/schedule/3f1faf66-80a8-430a-830f-4dca6df05872)).
 
-12. **Monteiro, S.**, van den Berg, J., Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026, November 13). *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health, Paris Brain Institute (ICM), Paris, France. **[Research pitch: 5-minute oral presentation]** ([symposium programme](https://www.clara-center.eu/clara-symposium-2026)).
+12. **Monteiro, S.**, van den Berg, J., Vansina, E., Reneman, L., Caan, M. W. A., & Schrantee, A. (2026, November 13). *Acute Methylphenidate-Related Brain Shifts in ADHD Detected by a Multibranch CNN.* CLARA Symposium on AI for Brain Health, Paris Brain Institute (ICM), Paris, France. **[Research pitch speaker: 5-minute oral presentation]** ([symposium programme](https://www.clara-center.eu/clara-symposium-2026)).
 
-13. **Monteiro, S.** (2023). *DigiCog: A psychometric approach to cognitive assessment.* Luxembourg Institute of Health (LIH), Department of Precision Health (DoPH) Annual Meeting, Luxembourg. **[Research pitch: 5-minute oral presentation].**
+13. **Monteiro, S.**, Maillard, A., Hentzen, C., Louis, E., Teng, M., Adrien, V., & Garcin, B. (2026, July 2). *Towards a multidimensional exploration of functional neurological disorder: Insights from manifold learning, density clustering and NLP.* FHU Treat-FND Research Group Meeting, France. **[Invited speaker: 30-minute oral research presentation].** [Presentation slides](https://docs.google.com/presentation/d/1ShKLuOHFuDhazd_PnH7f0saDM12__hGMR9DvSX25_II/edit)
+
+14. **Monteiro, S.** (2023). *DigiCog: A psychometric approach to cognitive assessment.* Luxembourg Institute of Health (LIH), Department of Precision Health (DoPH) Annual Meeting, Luxembourg. **[Research pitch speaker: 5-minute oral presentation].**
 
 ### Invited panel discussions
 
