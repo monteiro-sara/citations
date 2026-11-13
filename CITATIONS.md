@@ -48,7 +48,7 @@ _Last updated: 11 November 2026._
 
 13. **Monteiro, S.**, Maillard, A., Hentzen, C., Louis, E., Teng, M., Adrien, V., & Garcin, B. (2026, July 2). *Towards a multidimensional exploration of functional neurological disorder: Insights from manifold learning, density clustering and NLP.* FHU Treat-FND Research Group Meeting, France. **[Invited speaker: 30-minute oral research presentation].**
 
-14. **Monteiro, S.** (2023). *DigiCog: A psychometric approach to cognitive assessment.* Luxembourg Institute of Health (LIH), Department of Precision Health (DoPH) Annual Meeting, Luxembourg. **[Research pitch speaker: 5-minute oral presentation].**
+14. **Monteiro, S.** & Perquin, M. (2023). *DigiCog: A psychometric approach to validate VR-tech neurocognitive assessments.* Luxembourg Institute of Health (LIH), Department of Precision Health (DoPH) Annual Meeting, Luxembourg. **[Research pitch speaker: 5-minute oral presentation].**
 
 ### Invited panel discussions
 
